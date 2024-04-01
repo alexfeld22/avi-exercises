@@ -1,16 +1,35 @@
-
+// === consts ===
 
 const btn = document.getElementsByTagName('button')[0];
-btn.addEventListener('click',changeBackgroundColor);
+const colorPicker = document.getElementById('color-picker');
+const colorInput = document.getElementById('color-input');
 
-function changeBackgroundColor(){
-    const userColor = document.getElementsByTagName('input')[0].value;
-    if(isValidHexColor(userColor)){
-        document.body.style.backgroundColor = userColor;
+
+
+// === events ===
+
+btn.addEventListener('click',()=>{
+    setBackgroundColor(colorInput.value);
+});
+
+colorPicker.addEventListener('input',()=>{
+    setBackgroundColor(colorPicker.value);
+},true);
+
+colorPicker.addEventListener('change',(event)=>{
+    colorInput.value = colorPicker.value;
+},false);
+
+
+
+// === functions ===
+
+function setBackgroundColor(value){
+    if(isValidHexColor(value)){
+        document.body.style.backgroundColor = value;
         return;
     }
-    
-    window.alert(`${userColor} is not a correct HEX color`);
+    window.alert(`${value} is not a correct HEX color`);
     return;
 }
 
