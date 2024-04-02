@@ -44,6 +44,7 @@ import { contacts } from '../data/contacts.js';
 
 // # Array Order Methods 
 
+// === task1 ===
 // 1. Write a function that takes the array of contacts and returns a new array sorted by last name. 
 
 const sortContactsByLastName = function(contactsArr){
@@ -55,6 +56,7 @@ const sortContactsByLastName = function(contactsArr){
 // sortContactsByLastName(contacts.results).forEach((el)=> console.log(el.name.last));
 
 
+// === task 2 ===
 // 2. Write a function that takes an ID as a parameter and returns the contact with that ID.
 
 const getContactById = function(contactsArr,{name, value}){
@@ -63,3 +65,13 @@ const getContactById = function(contactsArr,{name, value}){
 
 // console.log(getContactById(contacts.results, contacts.results[50].id));
 // console.log(getContactById(contacts.results, {name: 'xxxx', value: 'yyyyy'}));
+
+// === task 3 ===
+// 3. Create a function that counts how many contacts are from a specific country. The country should be a parameter of the function. 
+
+const countContactsFromCountry = function (contactsArr, countryStr){
+    return contactsArr.reduce((acc, item) => acc + (item.location.country === countryStr ? 1: 0) ,0)
+}
+
+console.log(countContactsFromCountry(contacts.results,'Finland'));
+console.log(countContactsFromCountry(contacts.results,'Somali-land'));
