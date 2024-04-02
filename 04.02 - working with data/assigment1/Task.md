@@ -25,4 +25,5 @@ Create a simple HTML page with an input field and a submit button.
 - - If it's a string, filter contacts whose first or last name contains the string. Consider case sensitivity.
 - - If it's a number, find contacts whose phone number matches.
 - - Display the matching contacts below the input field. 
-You can list their names and phone numbers as a simple unordered list in HTML. Add styling to improve the layout.
+You can list their names and phone numbers as a simple unordered list in HTML. 
+Add styling to improve the layout.
