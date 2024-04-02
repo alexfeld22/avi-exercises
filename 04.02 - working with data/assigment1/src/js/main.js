@@ -52,7 +52,14 @@ const sortContactsByLastName = function(contactsArr){
     return contactsArrCopy;
 }
 
-sortContactsByLastName(contacts.results).forEach((el)=> console.log(el.name.last));
+// sortContactsByLastName(contacts.results).forEach((el)=> console.log(el.name.last));
 
 
-// 
+// 2. Write a function that takes an ID as a parameter and returns the contact with that ID.
+
+const getContactById = function(contactsArr,{name, value}){
+    return contactsArr.find((item)=> item.id.name === name && item.id.value === value) || -1;
+}
+
+// console.log(getContactById(contacts.results, contacts.results[50].id));
+// console.log(getContactById(contacts.results, {name: 'xxxx', value: 'yyyyy'}));
