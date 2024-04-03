@@ -134,14 +134,30 @@ const getContactById = function(contactsArr,{name, value}){
 // console.log(getContactById(contacts.results, contacts.results[50].id));
 // console.log(getContactById(contacts.results, {name: 'xxxx', value: 'yyyyy'}));
 
-
+// version 2
+const getContactByUUID = function(contactsArr,uuid){
+    return contactsArr.find((item)=> item.login.uuid === uuid) || -1;
+}
 
 
 // === task 3 ===
 // 3. Create a function that counts how many contacts are from a specific country. The country should be a parameter of the function. 
 
 const countContactsFromCountry = function (contactsArr, countryStr){
-    return contactsArr.reduce((acc, item) => acc + (item.location.country === countryStr ? 1: 0) ,0)
+    return contactsArr.reduce((acc, item) => acc + (item.location.country === countryStr ? 1: 0) ,0);
+}
+
+const countContactsFromCountry2 = function (contactsArr){
+    return contactsArr.reduce((acc, item) => {
+        let countryStr = item.location.counttry;
+        if (Object.keys(acc).includes(countryStr)){
+            acc[countryStr]++;
+        } else{
+            acc[countryStr] = 1;
+        }
+        return acc;
+        }
+    ,{});
 }
 
 // console.log(countContactsFromCountry(contacts.results,'Finland'));

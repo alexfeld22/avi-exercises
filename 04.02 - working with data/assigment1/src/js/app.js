@@ -81,6 +81,7 @@ function displayContact(id) {
         <div class="contact">
             <p>Country: <span>${contactInfo.location.country}</span></p>
             <p>E-mail: <span>${contactInfo.email}</span></p>
+            <p>Mob.phone: <span>${contactInfo.phone}</span></p>
         </div>
         `;
   contactDivEl.innerHTML = contactDiv;
