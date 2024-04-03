@@ -65,8 +65,8 @@ function displayContactList(contactsArr) {
       displayContact(uuid);
     });
     contactListEl.appendChild(liEl);
-    contactListEl.firstChild.classList.add('selected');
-    const id = contactListEl.firstChild.getAttribute('data-id');
+    contactListEl.firstChild.classList.add("selected");
+    const id = contactListEl.firstChild.getAttribute("data-id");
     displayContact(id);
   });
 }
