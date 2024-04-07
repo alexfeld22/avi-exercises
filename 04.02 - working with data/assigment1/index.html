@@ -7,10 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROJECT</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
+  <form>
+    <h1>Find a contact in our database</h1>
+    <input type="text" placeholder="write a name or a phone number" text-input>
+    <p class="error-text hidden" input-error></p>
+    <button type="button" search-btn>Search</button>
+  </form>
+  <div class="result">
+    <div class="result-list hidden" result-list>
+      <ul contact-list>
+      </ul>
+    </div>
+    <div class="contact" contact>
+    </div>
+  </div>
   <script src="src/js/main.js" type="module"></script>
 </body>
 

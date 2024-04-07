@@ -1,3 +1,71 @@
 * {
   box-sizing: border-box;
+  margin: 10px;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hidden{
+  display: none;
+}
+
+input.error{
+  border: 1px solid red;
+}
+
+p.error-text{
+  color: red;
+}
+
+input.ok{
+  border: 1px solid green;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  border: 2px dashed gray;
+}
+
+.result-list{
+  width: 500px;
+}
+
+.result-list>ul{
+  list-style-type: none;
+  max-width: 300px;
+}
+
+.result-list>ul>li{
+  cursor: pointer;
+}
+
+.result-list>ul>li.selected{
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 5px lightgray;
+  border: 1px dashed green;
+}
+
+.result-list>ul>li:hover{
+  background-color: lightgray;
+  border: 1px solid lightgreen;
+}
+
+.result{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.contact .img-rounded{
+  border-radius: 50%;
+}
+
+.contact{
+  font-weight: bold;
+}
+
+.contact span{
+  font-weight: normal;
 }
