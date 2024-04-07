@@ -236,15 +236,8 @@ function combine(prmX, prmY) {
     });
   }
 
-function fetchX(){
-    return resolveImmediate(25);
-}
 
-function fetchY(){
-    return resolveDelayed(17);
-}
-
-combine(fetchX(), fetchY())
+combine(resolveImmediate(25), resolveDelayed(17))
   .then((sum) => {
   console.log(sum);
   });
